@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Leaderboard</title>
+  <title>Live Mention</title>
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Arial">
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Google Analytics -->
@@ -48,53 +48,35 @@
       background-color: #ddd;
     }
     .content {
-      max-width: 800px;
-      margin: 20px auto 0;
-      padding: -10;
+      padding: 20px;
+      margin-top: 0px; /* Adjust the top margin to narrow the height */
     }
     .iframe-container {
-      position: relative;
-      width: 100%;
-      padding-bottom: 100%;
-      margin-top: 8%;
-      margin-bottom: 8%; /* Remove bottom margin */
-    }
-    .iframe-container iframe {
-      position: absolute;
-      top: 0;
+      position: fixed;
+      top: 10;
       left: 0;
       width: 100%;
-      height: 130%;
-      border: none;
+      height: 100vh;
+      z-index: -1;
     }
-    
-    /* Mobile Styles */
-    @media only screen and (max-width: 90%) {
-      .content {
-        margin: 0 auto;
-        max-width: 100%; /* Adjust width to fit the screen */
-        max-height: 100%;
-      }
-      .iframe-container {
-        padding-bottom: 0;
-        margin-top: 8%;
-        margin-bottom: 0;
-      }
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
 <body>
   <div class="menu">
     <ul>
-      <li><a href="index.html" class="active">24h Leaderboard</a></li>
-      <li><a href="live.html">Live Mention</a></li>
+      <li><a href="index.html">24h Leaderboard</a></li>
+      <li><a href="live.html" class="active">Live Mention</a></li>
       <li><a href="about.html">About</a></li>
     </ul>
   </div>
-  <div class="content">
-    <div class="iframe-container">
-      <iframe class="airtable-embed" src="https://airtable.com/embed/shruAUKkFmKHUzUxU?backgroundColor=grayLight&layout=card&viewControls=on" frameborder="0" onmousewheel="" style="background: transparent;"></iframe>
-    </div>
+  <div class="content"></div>
+  <div class="iframe-container">
+    <iframe class="airtable-embed" src="https://airtable.com/embed/shriSVmkK4Rptd6Wk?backgroundColor=grayLight" frameborder="0" onmousewheel="" style="background: transparent;"></iframe>
   </div>
 </body>
 </html>

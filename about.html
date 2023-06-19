@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Leaderboard</title>
+  <title>About</title>
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Arial">
   <link rel="icon" type="image/png" href="favicon.png">
   <!-- Google Analytics -->
@@ -48,53 +48,56 @@
       background-color: #ddd;
     }
     .content {
-      max-width: 800px;
-      margin: 20px auto 0;
-      padding: -10;
+      padding: 20px;
+      margin-top: 50px;
     }
     .iframe-container {
-      position: relative;
-      width: 100%;
-      padding-bottom: 100%;
-      margin-top: 8%;
-      margin-bottom: 8%; /* Remove bottom margin */
-    }
-    .iframe-container iframe {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      height: 130%;
-      border: none;
+      height: 100vh;
+      z-index: -1;
     }
-    
-    /* Mobile Styles */
-    @media only screen and (max-width: 90%) {
-      .content {
-        margin: 0 auto;
-        max-width: 100%; /* Adjust width to fit the screen */
-        max-height: 100%;
-      }
-      .iframe-container {
-        padding-bottom: 0;
-        margin-top: 8%;
-        margin-bottom: 0;
-      }
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
     }
   </style>
 </head>
 <body>
   <div class="menu">
     <ul>
-      <li><a href="index.html" class="active">24h Leaderboard</a></li>
+      <li><a href="index.html">24h Leaderboard</a></li>
       <li><a href="live.html">Live Mention</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html" class="active">About</a></li>
     </ul>
   </div>
   <div class="content">
-    <div class="iframe-container">
-      <iframe class="airtable-embed" src="https://airtable.com/embed/shruAUKkFmKHUzUxU?backgroundColor=grayLight&layout=card&viewControls=on" frameborder="0" onmousewheel="" style="background: transparent;"></iframe>
-    </div>
+    <h3>gm ordinals fam! 💛</h3>
+    <p>Ordinal is capturing my attention a lot recently. </br>
+I believe social are one of the most important signals we should pay attention to. </br>
+This dashboard was motivated by that.
+</br></br>Here, you'll find 2 main tabs:
+</br></br>
+<b>24h Leaderboard</b>: 
+</br>- Discover which collections were trending over the past 24 hours. 
+</br>- The upcoming ones are highlighted in yellow. 
+</br>- The volume and floor were taken from Magiceden.
+</br></br>
+<b>A live mention</b>: </br>
+- Show KOL tweets in a timeline and allow you to check tweet details. 
+</br>- The number of KOLs may be few, but don't worry, I will add more soon. 
+</br></br>
+Eventually, I would like to develop features such as alert notifications for new mentions.
+</br></br></br>
+👩‍💻 This is just the first version, I'll be back soon with a more beautiful interface!
+</br>
+Would love to hear your feedback or ideas.
+</br></br> 🐿️ Feel free to DM me:  <a href="https://twitter.com/bluedataa" target=”_blank>@bluedataa</a> 
+
+</p>
   </div>
 </body>
 </html>
