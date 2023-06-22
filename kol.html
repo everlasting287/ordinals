@@ -1,7 +1,6 @@
-<!DOCTYPE html>
 <html lang="en" class="no-js">
    <head>
-      <meta charset="utf-8">
+            <meta charset="utf-8">
       <link rel="icon" href="https://i.imgur.com/sfqWU3a.jpg" type="image/x-icon">
       <meta name="viewport" content="width=device-width,initial-scale=1.0">
       <meta property="og:title" content="Ordinals Social Mention">
@@ -19,20 +18,9 @@
       <meta property="vk:article" content="Ordinals Social Mention">
       <meta property="vk:article_author" content="iscover which collections were trending on Twitter over the past 24 hours.">
       <meta name="twitter:creator" content="@bluedataa" />
-
-
+     
       <style>
-      html body {
-         width: 100%;
-         height: 100%;
-         padding: 0px;
-         margin: 0px;
-         overflow: hidden;
-         font-family: arial;
-         font-size: 10px;
-         color: #000;
-         background-color: #fff;
-      }
+      html body {width: 100%;height: 100%;padding: 0px;margin: 0px;overflow: hidden;font-family: arial;font-size: 10px;color: #6e6e6e;background-color: #000;}
       .menu {
          background-color: #f2f2f2;
          position: fixed;
@@ -56,28 +44,34 @@
          text-align: center;
          padding: 14px 16px;
          text-decoration: none;
-         font-size: 14px;
+         font-size: 14px; /* Increased font size */
       }
       .menu li a:hover,
       .menu li a.active {
          background-color: #ddd;
       }
-      .content {
+      #preview-frame {
+         width: 100%;
          background-color: #fff;
-         color: #000;
-         padding: 20px;
-         font-size: 15px;
+         margin-top: 40px;
+         height: calc(100vh - 40px);
       }
       </style>
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <script>
          //function to fix height of iframe!
          var calcHeight = function() {
+           //var headerDimensions = 0; //$('#header-bar').height();
            $('#preview-frame').height($(window).height() - $('.menu').height());
          }
          
          $(document).ready(function() {
            calcHeight();
+           /*$('#header-bar a.close').mouseover(function() {
+             $('#header-bar a.close').addClass('activated');
+           }).mouseout(function() {
+             $('#header-bar a.close').removeClass('activated');
+           });*/
            
            // Add active class to the current menu item
            var path = window.location.pathname;
@@ -105,41 +99,6 @@
             <li><a href="gm.html">GM!</a></li>
          </ul>
       </div>
-      <div class="content">
-         </br> </br>
-         <h3>gm ordinals fam! 🧡</h3>
-         <p>
-I believe social are one of the most important signals we should pay attention to. 
-</br> 
-This dashboard was motivated by that.
-</br> </br> 
-As this is a very quick version, let's focus on data instead of interface ;)
-</br> </br> 
-<b> 24h leaderboard</b> 
-</br> 
-- You can discover which collections were trending on Twitter over the past 24 hours here. The upcoming ones are highlighted in yellow. 
-</br> 
-- It counts total mentions from others (I already exclude self-mentions). Floor and volume are real-time updates from MagicEden. Daily chart are coming
-</br> 
-- I'm considering removing mention for incentive purposes and calculating hype score based on who mentions and the sentiments expressed.
-</br> </br> 
-<b> Live @mention </b> 
-</br> 
-- Show every tweets that mention to each collection
-</br>- You should view it on a desktop. 
-</br>- KOL tweets are highlighted in blue. Please let me know if I missed any KOLs.
-</br>
-- I may develop alerts for new mentions if you guys want them
-
-</br> 
-</br> 
-👩‍💻 Would love to hear your feedback or ideas. 
-</br> </br> 
-🐿️ Feel free to DM me: <a href="https://twitter.com/bluedataa" target="_blank">@bluedataa</a>
-
-
-
-</p>
-      </div>
+      <iframe id="preview-frame" src="https://airtable.com/embed/shrIatJaanVtrs9yK?backgroundColor=grayLight" name="preview-frame" frameborder="0" noresize></iframe>
    </body>
 </html>
